@@ -3,7 +3,6 @@
 
 #include "System/conf.h"
 
-
 String receive_0();
 
 String receive_1();
@@ -77,6 +76,5 @@ void product_not_found();
 void clear_uart0_buffer();
 
 void clear_uart1_buffer();
-
 
 #endif

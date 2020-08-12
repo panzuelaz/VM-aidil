@@ -3,28 +3,26 @@
 
 char ProductRelease[5];
 
-String receive() {
+String receive()
+{
   String content = "";
   content = Serial.readStringUntil('\r' || '\n');
   return content;
-  }
-
+}
 
 void setup()
 {
-  INIT_DEBUG;             // Init UART0
-  INIT_PC_COMM;           // Init UART1
+  INIT_DEBUG;   // Init UART0
+  INIT_PC_COMM; // Init UART1
 
-  pins_setup();           // Set GPIO pins
+  pins_setup(); // Set GPIO pins
 }
-
 
 void loop()
 {
   // Clear UARTs buffer
   // clear_uart0_buffer();
   // clear_uart1_buffer();
-
 
   /*****  CHECK COMMAND FROM APPS  *****/
   if (Serial.available())
